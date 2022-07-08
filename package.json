@@ -5,30 +5,25 @@
     "main": "index.js",
     "scripts": {
         "hardhat:compile": "npx hardhat compile",
-        "clean": "npm-run-all -p clean:types",
-        "clean:types": "rimraf typechain",
-        "test": "npx hardhat test",
-        "start": "npx hardhat run --network localhost scripts/deploy.ts",
-        "compile": "npx hardhat clean && npx hardhat compile && npx hardhat run src/generate.ts",
-        "test:parallel": "npx hardhat test --parallel",
-        "build": "npm run compile",
-        "deploy": "npx hardhat src/deploy.ts",
-        "deploy:test": "cross-env NODE_ENV=test ts-node src/deploy.ts",
-        "lint": "eslint src test",
-        "lint:fix": "eslint src test --fix",
-        "lint:staged": "lint-staged",
-        "prepublishOnly": "npm run test"
+        "test:parallel": "npx hardhat test --parallel"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "@nomiclabs/hardhat-ethers": "^2.1.0",
         "@opengsn/gsn": "^2.1.0",
         "@openzeppelin/contracts": "^3.4.2",
+        "@typechain/ethers-v5": "^10.1.0",
+        "@typechain/hardhat": "^6.1.2",
         "dotenv": "^16.0.1",
+        "ethers": "^5.6.9",
         "ganache-core": "^2.13.2",
         "hardhat": "^2.10.0",
         "lodash": "^4.17.21",
+        "ts-node": "^10.8.2",
+        "typechain": "^8.1.0",
+        "typescript": "^4.7.4",
         "web3": "^1.7.4",
         "web3-core": "^1.7.4"
     }

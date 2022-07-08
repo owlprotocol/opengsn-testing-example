@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity >=0.6.0;
 
-import '@opengsn/gsn/contracts/BaseRelayRecipient.sol';
-import '@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol';
+import "@opengsn/gsn/contracts/BaseRelayRecipient.sol";
+import "@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol";
 
 /**
  * @dev A simple minimal Proof-of-Concept contract using GSN
@@ -10,7 +10,7 @@ import '@opengsn/gsn/contracts/interfaces/IKnowForwarderAddress.sol';
 contract CaptureTheFlag is BaseRelayRecipient, IKnowForwarderAddress {
     event FlagCaptured(address _from, address _to);
 
-    address flagHolder = address(0);
+    address public flagHolder = address(0);
 
     function setTrustedForwarder(address _trustedForwarder) public {
         trustedForwarder = _trustedForwarder;
@@ -21,7 +21,7 @@ contract CaptureTheFlag is BaseRelayRecipient, IKnowForwarderAddress {
     }
 
     function versionRecipient() external view override returns (string memory) {
-        return '2.0.0';
+        return "2.0.0";
     }
 
     function captureFlag() external {

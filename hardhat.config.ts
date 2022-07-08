@@ -12,6 +12,10 @@ const config: HardhatUserConfig = {
         hardhat: {
             chainId: 1337,
         },
+        ganache: {
+            chainId: 1337,
+            url: 'http://localhost:8545'
+        }
     },
     //@ts-ignore
     typechain: {

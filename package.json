@@ -1,0 +1,35 @@
+{
+    "name": "opengsn-testing-example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "hardhat:compile": "npx hardhat compile",
+        "clean": "npm-run-all -p clean:types",
+        "clean:types": "rimraf typechain",
+        "test": "npx hardhat test",
+        "start": "npx hardhat run --network localhost scripts/deploy.ts",
+        "compile": "npx hardhat clean && npx hardhat compile && npx hardhat run src/generate.ts",
+        "test:parallel": "npx hardhat test --parallel",
+        "build": "npm run compile",
+        "deploy": "npx hardhat src/deploy.ts",
+        "deploy:test": "cross-env NODE_ENV=test ts-node src/deploy.ts",
+        "lint": "eslint src test",
+        "lint:fix": "eslint src test --fix",
+        "lint:staged": "lint-staged",
+        "prepublishOnly": "npm run test"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@opengsn/gsn": "^2.1.0",
+        "@openzeppelin/contracts": "^3.4.2",
+        "dotenv": "^16.0.1",
+        "ganache-core": "^2.13.2",
+        "hardhat": "^2.10.0",
+        "lodash": "^4.17.21",
+        "web3": "^1.7.4",
+        "web3-core": "^1.7.4"
+    }
+}

@@ -84,8 +84,6 @@ describe('CaptureTheFlag', () => {
 
             //No gas was spent by user
             const finalBalance = await ethersHH.provider.getBalance(accounts[1].address);
-            console.debug(initialBalance.toString())
-            console.debug(finalBalance.toString())
             assert.isTrue(finalBalance.eq(initialBalance), 'finalBalance != initialBalance');
         });
 

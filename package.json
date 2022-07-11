@@ -5,9 +5,8 @@
     "main": "index.js",
     "scripts": {
         "hardhat:compile": "npx hardhat compile",
-        "test": "npx hardhat test --network ganache",
-        "ganache": "ganache-cli -i 1337 --chainId 1337 -l 8500000 --mnemonic 'right system edge purse arch sport citizen spy obvious tiny hole priority'",
-        "ganache2": "ganache -i 1337 -l 8500000 --mnemonic 'right system edge purse arch sport citizen spy obvious tiny hole priority'"
+        "test": "hardhat test --network ganache",
+        "node": "hardhat node"
     },
     "keywords": [],
     "author": "",
